@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1086427413629",
+    "project_id": "appagengalon",
+    "storage_bucket": "appagengalon.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086427413629:android:5d956a17b1e3498ec2c514",
+        "android_client_info": {
+          "package_name": "com.example.agengalonapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIsdMtLxxhMfUlN81zAsz687kRfW_6x3c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

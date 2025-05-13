@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/textAir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stok Air: -- Liter"
+        android:textSize="24sp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/textGalonKosong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Galon Kosong: --"
+        android:textSize="24sp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/textGalonIsi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Galon Isi: --"
+        android:textSize="24sp"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/buttonTambahTransaksi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tambah Transaksi" />
+</LinearLayout>
