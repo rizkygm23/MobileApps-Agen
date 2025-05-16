@@ -23,12 +23,7 @@ class LoginActivity : AppCompatActivity() {
         editPassword = findViewById(R.id.editPassword)
         buttonLogin = findViewById(R.id.buttonLogin)
         textRegister = findViewById(R.id.textRegister)
-        if (auth.currentUser != null) {
-            val intent = Intent(this, DashboardActivity::class.java)
-            startActivity(intent)
-            finish()
-            return
-        }
+
         buttonLogin.setOnClickListener {
             val email = editEmail.text.toString().trim()
             val password = editPassword.text.toString().trim()

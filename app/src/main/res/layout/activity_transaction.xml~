@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Transaction"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Water Refill Only -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/textWaterLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Water Refill Only\nRp 5,000 / unit"/>
+
+            <EditText
+                android:id="@+id/editQtyWater"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:hint="Qty"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <!-- Galon Only -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/textGalonLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Galon Only\nRp 50,000 / unit"/>
+
+            <EditText
+                android:id="@+id/editQtyGalon"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:hint="Qty"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <!-- Galon + Water -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Galon + Water\nRp 55,000 / unit"/>
+
+            <EditText
+                android:id="@+id/editQtyWaterGalon"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:hint="Qty"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <!-- Subtotal -->
+        <TextView
+            android:id="@+id/textSubtotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Subtotal: Rp 0"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Cash Received -->
+        <EditText
+            android:id="@+id/editCash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Cash Received"
+            android:inputType="number"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Change -->
+        <TextView
+            android:id="@+id/textChange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Change: Rp 0"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Complete Transaction Button -->
+        <Button
+            android:id="@+id/buttonCompleteTransaction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Complete Transaction"/>
+    </LinearLayout>
+
+</ScrollView>

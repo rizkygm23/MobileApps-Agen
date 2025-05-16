@@ -171,7 +171,7 @@ class DashboardActivity : AppCompatActivity() {
         findViewById<LinearLayout>(R.id.navProfile).setOnClickListener {
             Toast.makeText(this, "Go to Profile", Toast.LENGTH_SHORT).show()
             overridePendingTransition(0, 0)
-             startActivity(Intent(this, ProfileActivity::class.java))
+            // startActivity(Intent(this, ProfileActivity::class.java))
         }
 
     }

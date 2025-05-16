@@ -39,6 +39,14 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
+        <TextView
+            android:id="@+id/textSub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fill the details below"
+            android:textSize="14sp"
+            android:layout_marginBottom="24dp" />
+
         <!-- Nama -->
         <EditText
             android:id="@+id/editName"

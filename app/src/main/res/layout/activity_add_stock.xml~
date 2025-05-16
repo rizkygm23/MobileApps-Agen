@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Empty Galons -->
+        <TextView
+            android:text="Empty Galons"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"/>
+        <TextView
+            android:id="@+id/textEmptyGalonsStock"
+            android:text="Current Stock: -- units"
+            android:layout_marginBottom="8dp"/>
+        <EditText
+            android:id="@+id/editAddEmptyGalons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Add Amount"
+            android:inputType="number"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Water Stock -->
+        <TextView
+            android:text="Water Stock"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"/>
+        <TextView
+            android:id="@+id/textWaterStock"
+            android:text="Current Stock: -- L"
+            android:layout_marginBottom="8dp"/>
+        <EditText
+            android:id="@+id/editAddWaterStock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Add Amount (L)"
+            android:inputType="number"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Filled Galons -->
+        <TextView
+            android:text="Filled Galons"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"/>
+        <TextView
+            android:id="@+id/textFilledGalonsStock"
+            android:text="Current Stock: -- units"
+            android:layout_marginBottom="8dp"/>
+        <EditText
+            android:id="@+id/editAddFilledGalons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Add Amount"
+            android:inputType="number"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Edit Prices -->
+        <TextView
+            android:text="Edit Prices"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/editPriceWater"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Price Water Only (Rp)"
+            android:inputType="number"
+            android:layout_marginBottom="8dp"/>
+        <EditText
+            android:id="@+id/editPriceGalon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Price Galon Only (Rp)"
+            android:inputType="number"
+            android:layout_marginBottom="8dp"/>
+        <EditText
+            android:id="@+id/editPriceWaterGalon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Price Water + Galon (Rp)"
+            android:inputType="number"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Notes -->
+        <EditText
+            android:id="@+id/editNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Add any additional notes..."
+            android:layout_marginBottom="24dp"
+            android:minHeight="100dp"/>
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/buttonSaveChanges"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Changes"/>
+    </LinearLayout>
+</ScrollView>
