@@ -11,33 +11,37 @@
         android:id="@+id/textTransactionId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
         android:text="#TRX-2505090001"
-        android:textStyle="bold"
-        android:textSize="14sp" />
+        android:textSize="14sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textTransactionDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/poppins_light"
         android:text="May 9, 2025 - 14:30"
-        android:textSize="12sp"
         android:textColor="#888888"
-        android:layout_marginTop="4dp" />
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/textTransactionDetails"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Filled Galon 2x\nEmpty Galon 1x"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="Filled Galon 2x\nEmpty Galon 1x"
         android:textSize="14sp" />
 
     <TextView
         android:id="@+id/textTransactionTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Total: Rp 75.000"
-        android:textStyle="bold"
         android:layout_marginTop="8dp"
-        android:textSize="14sp" />
+        android:fontFamily="@font/poppins_bold"
+        android:text="Total: Rp 75.000"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 </LinearLayout>

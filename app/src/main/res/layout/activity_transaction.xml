@@ -6,85 +6,125 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <!-- Header -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="New Transaction"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="16dp" />
 
         <!-- Water Refill Only -->
-        <LinearLayout
+        <TextView
+            android:id="@+id/textWaterLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="16dp">
+            android:layout_marginBottom="4dp"
+            android:text="Water Refill Only"    />
 
-            <TextView
-                android:id="@+id/textWaterLabel"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Water Refill Only\nRp 5,000 / unit"/>
+        <!-- Galon Only -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnMinusWater"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="-" />
 
             <EditText
                 android:id="@+id/editQtyWater"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:hint="Qty"
-                android:inputType="number"/>
+                android:layout_width="60dp"
+                android:layout_height="61dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:paddingVertical="12sp"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/btnPlusWater"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+" />
         </LinearLayout>
 
-        <!-- Galon Only -->
-        <LinearLayout
+        <TextView
+            android:id="@+id/textGalonLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="16dp">
+            android:layout_marginBottom="4dp"
+            android:text="Galon Only" />
 
-            <TextView
-                android:id="@+id/textGalonLabel"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Galon Only\nRp 50,000 / unit"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnMinusGalon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="-" />
 
             <EditText
                 android:id="@+id/editQtyGalon"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:hint="Qty"
-                android:inputType="number"/>
+                android:layout_width="60dp"
+                android:layout_height="65dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/btnPlusGalon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+" />
         </LinearLayout>
 
         <!-- Galon + Water -->
-        <LinearLayout
+        <TextView
+            android:id="@+id/textWaterGalonLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="24dp">
+            android:text="Galon + Water"
+            android:layout_marginBottom="4dp" />
 
-            <TextView
-                android:id="@+id/textWaterGalonLabel"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Galon + Water\nRp 55,000 / unit"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnMinusWaterGalon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="-" />
 
             <EditText
                 android:id="@+id/editQtyWaterGalon"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:hint="Qty"
-                android:inputType="number"/>
+                android:layout_width="60dp"
+                android:layout_height="68dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/btnPlusWaterGalon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+" />
         </LinearLayout>
 
         <!-- Subtotal -->
@@ -95,18 +135,89 @@
             android:text="Subtotal: Rp 0"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="12dp" />
 
-        <!-- Cash Received -->
+        <!-- Cash Input -->
         <EditText
             android:id="@+id/editCash"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter Cash Received"
             android:inputType="number"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="8dp" />
 
-        <!-- Change -->
+        <!-- Pecahan Tombol -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginBottom="8dp">
+
+            <Button
+                android:id="@+id/btn2000"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_card_white"
+                android:text="2K"
+                android:textColor="#F2F2F2" />
+
+            <Button
+                android:id="@+id/btn5000"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_card_white"
+                android:text="5K"
+                android:textColor="#F2F2F2" />
+
+            <Button
+                android:id="@+id/btn10000"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_card_white"
+                android:text="10K"
+                android:textColor="#F2F2F2" />
+        </LinearLayout>
+
+        <!-- Baris 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/btn20000"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_card_white"
+                android:text="20K"
+                android:textColor="#F6F6F6" />
+
+            <Button
+                android:id="@+id/btn50000"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_card_white"
+                android:text="50K"
+                android:textColor="#F6F6F6" />
+
+            <Button
+                android:id="@+id/btn100000"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_card_white"
+                android:text="100K"
+                android:textColor="#F6F6F6" />
+        </LinearLayout>
+
         <TextView
             android:id="@+id/textChange"
             android:layout_width="match_parent"
@@ -114,14 +225,17 @@
             android:text="Change: Rp 0"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:layout_marginBottom="24dp"/>
+            android:layout_marginBottom="24dp" />
 
-        <!-- Complete Transaction Button -->
         <Button
             android:id="@+id/buttonCompleteTransaction"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Complete Transaction"/>
+            android:background="@drawable/btn_background"
+            android:backgroundTint="#006FBB"
+            android:text="Buat Transaksi"
+            android:textSize="12sp"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
     </LinearLayout>
-
 </ScrollView>

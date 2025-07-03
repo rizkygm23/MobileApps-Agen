@@ -9,20 +9,30 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Empty Galons -->
+        <!-- Header -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Empty Galons"
+            android:text="Edit data"
+            android:textSize="24sp"
             android:textStyle="bold"
-            android:textSize="18sp"
-            android:layout_marginBottom="8dp"/>
+            android:layout_marginBottom="24dp" />
+
+        <!-- Empty Galons Section -->
         <TextView
+            android:text="Galon Kosong"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
             android:id="@+id/textEmptyGalonsStock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Current Stock: -- units"
-            android:layout_marginBottom="8dp"/>
+            android:layout_marginBottom="4dp"/>
+
         <EditText
             android:id="@+id/editAddEmptyGalons"
             android:layout_width="match_parent"
@@ -31,42 +41,44 @@
             android:inputType="number"
             android:layout_marginBottom="16dp"/>
 
-        <!-- Water Stock -->
+        <!-- Water Stock Section -->
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Water Stock"
+            android:text="Air (L)"
             android:textStyle="bold"
-            android:textSize="18sp"
-            android:layout_marginBottom="8dp"/>
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
             android:id="@+id/textWaterStock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Current Stock: -- L"
-            android:layout_marginBottom="8dp"/>
+            android:layout_marginBottom="4dp"/>
+
         <EditText
             android:id="@+id/editAddWaterStock"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Add Amount (L)"
+            android:hint="Add Liters"
             android:inputType="number"
             android:layout_marginBottom="16dp"/>
 
-        <!-- Filled Galons -->
+        <!-- Filled Galons Section -->
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Filled Galons"
+            android:text="Galon Terisi"
             android:textStyle="bold"
-            android:textSize="18sp"
-            android:layout_marginBottom="8dp"/>
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
             android:id="@+id/textFilledGalonsStock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Current Stock: -- units"
-            android:layout_marginBottom="8dp"/>
+            android:layout_marginBottom="4dp"/>
+
         <EditText
             android:id="@+id/editAddFilledGalons"
             android:layout_width="match_parent"
@@ -75,51 +87,60 @@
             android:inputType="number"
             android:layout_marginBottom="24dp"/>
 
-        <!-- Edit Prices -->
+        <!-- Price Update Section -->
         <TextView
+            android:text="Update Harga (Rp)"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Edit Prices"
-            android:textStyle="bold"
-            android:textSize="18sp"
             android:layout_marginBottom="8dp"/>
 
         <EditText
             android:id="@+id/editPriceWater"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Price Water Only (Rp)"
+            android:hint="Harga Air saja / 19L"
             android:inputType="number"
             android:layout_marginBottom="8dp"/>
+
         <EditText
             android:id="@+id/editPriceGalon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Price Galon Only (Rp)"
+            android:hint="Harga galon saja"
             android:inputType="number"
             android:layout_marginBottom="8dp"/>
+
         <EditText
             android:id="@+id/editPriceWaterGalon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Price Water + Galon (Rp)"
+            android:hint="Harga galon + air / 19L"
             android:inputType="number"
             android:layout_marginBottom="24dp"/>
 
-        <!-- Notes -->
+        <!-- Notes Section -->
         <EditText
             android:id="@+id/editNotes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Add any additional notes..."
-            android:layout_marginBottom="24dp"
-            android:minHeight="100dp"/>
+            android:hint="Add Notes (optional)"
+            android:minHeight="100dp"
+            android:layout_marginBottom="24dp"/>
 
         <!-- Save Button -->
         <Button
             android:id="@+id/buttonSaveChanges"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Save Changes"/>
+            android:background="@drawable/btn_background"
+            android:backgroundTint="#006FBB"
+            android:text="Simpan"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:textAllCaps="false"
+            android:textStyle="bold" />
+
+
     </LinearLayout>
 </ScrollView>

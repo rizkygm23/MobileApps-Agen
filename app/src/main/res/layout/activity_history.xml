@@ -11,9 +11,11 @@
         android:id="@+id/textHistoryTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
         android:text="Transaction History"
+        android:textColor="@color/black"
         android:textSize="24sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
     <!-- RecyclerView -->
     <androidx.recyclerview.widget.RecyclerView
@@ -31,12 +33,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@drawable/nav_background"
-        android:baselineAligned="false"
         android:orientation="horizontal"
         android:padding="8dp"
         android:weightSum="3">
 
-        <!-- Dashboard -->
         <LinearLayout
             android:id="@+id/navDashboard"
             android:layout_width="0dp"
@@ -54,12 +54,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
                 android:text="Dashboard"
+                android:textColor="#708491"
                 android:textSize="12sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
-        <!-- Transaction -->
         <LinearLayout
             android:id="@+id/navTransaction"
             android:layout_width="0dp"
@@ -77,11 +78,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
                 android:text="Transaksi"
+                android:textColor="#006FBB"
                 android:textSize="12sp" />
         </LinearLayout>
 
-        <!-- Profile (History) -->
         <LinearLayout
             android:id="@+id/navProfile"
             android:layout_width="0dp"
@@ -99,6 +101,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
                 android:text="Profile"
                 android:textSize="12sp" />
         </LinearLayout>

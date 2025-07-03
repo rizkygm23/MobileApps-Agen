@@ -46,9 +46,9 @@ class DashboardActivity : AppCompatActivity() {
                 val waterStock = snapshot.getLong("waterStock") ?: 0
                 val filledGalons = snapshot.getLong("filledGalons") ?: 0
 
-                textEmptyGalon.text = "Empty Galons: $emptyGalons units"
+                textEmptyGalon.text = "Empty Galons: $emptyGalons Items"
                 textWaterStock.text = "Water Stock: $waterStock L"
-                textFilledGalon.text = "Filled Galons: $filledGalons units"
+                textFilledGalon.text = "Filled Galons: $filledGalons Items"
             } else {
                 Log.d("Firestore", "Current data: null")
             }
@@ -85,8 +85,8 @@ class DashboardActivity : AppCompatActivity() {
                     totalSales += subtotal.toInt()
                 }
 
-                textSales.text = "Sales: Rp $totalSales"
-                textTransactions.text = "Transactions: $totalTransactions"
+                textSales.text = "Rp $totalSales"
+                textTransactions.text = "$totalTransactions"
             }
         fun addStock(emptyGalonsToAdd: Int, waterStockToAdd: Int, filledGalonsToAdd: Int) {
             val db = FirebaseFirestore.getInstance()
@@ -170,8 +170,10 @@ class DashboardActivity : AppCompatActivity() {
 
         findViewById<LinearLayout>(R.id.navProfile).setOnClickListener {
             Toast.makeText(this, "Go to Profile", Toast.LENGTH_SHORT).show()
-            overridePendingTransition(0, 0)
+
              startActivity(Intent(this, ProfileActivity::class.java))
+            overridePendingTransition(0, 0)
+            finish()
         }
 
     }

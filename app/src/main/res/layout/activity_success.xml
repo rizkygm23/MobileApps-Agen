@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#006FBB"
+    android:gravity="center"
+    android:padding="24dp">
+
+    <ImageView
+        android:id="@+id/imageSuccess"
+        android:layout_width="354dp"
+        android:layout_height="230dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/ic_success" />
+
+    <TextView
+        android:id="@+id/textSuccess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageSuccess"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Transaksi Berhasil!"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonBackDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textSuccess"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/btn_background"
+        android:backgroundTint="#F2F2F2"
+        android:text="Kembali ke Dashboard"
+        android:textColor="#006FBB" />
+</RelativeLayout>

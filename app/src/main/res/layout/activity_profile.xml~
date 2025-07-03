@@ -1,0 +1,266 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profileLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FBFAFA"
+    tools:context=".ProfileActivity">
+
+    <!-- Judul -->
+    <TextView
+        android:id="@+id/textTitleProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="My Profile"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Summary Section -->
+    <LinearLayout
+        android:id="@+id/summarySection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textTitleProfile"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp">
+
+        <!-- Total Asset -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card_white"
+            android:padding="16dp"
+            android:layout_marginBottom="8dp"
+            android:elevation="4dp">
+
+            <TextView
+                android:id="@+id/textTotalAsset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Total Asset Toko"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textTotalAssetValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Rp --"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Avg Transaksi -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card_white"
+            android:padding="16dp"
+            android:elevation="4dp">
+
+            <TextView
+                android:id="@+id/textAvgTransaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Rata-rata Per Transaksi"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textAvgTransactionValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Rp --"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Field Nama -->
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/summarySection"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_edittext"
+        android:drawableStart="@drawable/ic_profile_active"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/poppins_medium"
+        android:hint="Enter your name"
+        android:inputType="textPersonName"
+        android:padding="12dp" />
+
+    <!-- Field Email -->
+
+    <!-- Field Alamat -->
+    <EditText
+        android:id="@+id/editEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editName"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_edittext"
+        android:drawableStart="@drawable/ic_email_active"
+        android:drawablePadding="8dp"
+        android:enabled="false"
+        android:focusable="false"
+        android:fontFamily="@font/poppins_medium"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:padding="12dp" />
+
+    <EditText
+        android:id="@+id/editAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editEmail"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_edittext"
+        android:drawableStart="@drawable/ic_address_active"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/poppins_medium"
+        android:hint="Enter your address"
+        android:inputType="textPostalAddress"
+        android:padding="12dp" />
+
+    <!-- Tombol Update -->
+    <Button
+        android:id="@+id/buttonUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editAddress"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/btn_background"
+        android:fontFamily="@font/poppins_semibold"
+        android:padding="12dp"
+        android:text="Update"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF" />
+
+    <!-- Tombol EOD -->
+    <Button
+        android:id="@+id/buttonEOD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonUpdate"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/btn_background"
+        android:backgroundTint="#4CAF50"
+        android:fontFamily="@font/poppins_semibold"
+        android:padding="12dp"
+        android:text="Export EOD Report"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF" />
+
+    <!-- Tombol Logout -->
+    <Button
+        android:id="@+id/buttonLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonEOD"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/btn_background"
+        android:backgroundTint="#D32F2F"
+        android:fontFamily="@font/poppins_semibold"
+        android:padding="12dp"
+        android:text="Logout"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF" />
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/nav_background"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:id="@+id/navDashboard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_dashboard_default" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:includeFontPadding="false"
+                android:text="Dashboard"
+                android:textColor="#708491"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navTransaction"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_transaction_default" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Transaksi"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navProfile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_profile_active" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Profile"
+                android:textColor="#006FBB"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

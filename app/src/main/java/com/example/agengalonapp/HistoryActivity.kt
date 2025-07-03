@@ -56,15 +56,17 @@ class HistoryActivity : AppCompatActivity() {
         }
 
         findViewById<LinearLayout>(R.id.navTransaction).setOnClickListener {
-            startActivity(Intent(this, TransactionActivity::class.java))
-            overridePendingTransition(0, 0)
-            finish()
+//            startActivity(Intent(this, TransactionActivity::class.java))
+//            overridePendingTransition(0, 0)
+//            finish()
         }
 
         findViewById<LinearLayout>(R.id.navProfile).setOnClickListener {
             Toast.makeText(this, "Go to Profile", Toast.LENGTH_SHORT).show()
+
+             startActivity(Intent(this, ProfileActivity::class.java))
             overridePendingTransition(0, 0)
-            // startActivity(Intent(this, ProfileActivity::class.java))
+            finish()
         }
     }
 
@@ -150,6 +152,8 @@ class HistoryAdapter(private val items: List<TransactionItem>) : RecyclerView.Ad
 
     }
     // Bottom Navigation
+
+
 
 
 }

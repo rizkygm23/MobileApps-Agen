@@ -1,117 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp">
+    android:background="#006EBB">
+
+    <!-- Logo -->
+
+    <!-- Card Container -->
+
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="430dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-10dp"
+        android:layout_marginTop="-15dp"
+        android:layout_marginEnd="0dp"
+        android:contentDescription="Logo"
+        android:src="@drawable/login_bg" />
 
     <LinearLayout
+        android:id="@+id/cardLogin"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="334dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="397dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/login_card_background"
+        android:elevation="4dp"
         android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:padding="24dp">
 
-        <!-- Judul -->
+        <!-- Title -->
         <TextView
-            android:id="@+id/textTitle"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="24dp"
-            android:text="SiTetes"
-            android:textColor="#006FBB"
-            android:textSize="24sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Login to Your Account"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
-        <!-- Icon Profile -->
-        android:src="@drawable/ic_person" <!-- pakai icon default atau upload nanti -->
-
-
-        <!-- Welcome Text -->
-        <ImageView
-            android:id="@+id/imageProfile"
-            android:layout_width="168dp"
-            android:layout_height="155dp"
-            android:layout_marginBottom="16dp"
-            app:srcCompat="@drawable/logo" />
-
-        <TextView
-            android:id="@+id/textWelcome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Welcome Back"
-            android:textSize="18sp"
-            android:textStyle="bold"/>
-
-        <TextView
-            android:id="@+id/textSub"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Please login to continue"
-            android:textSize="14sp"
-            android:layout_marginBottom="24dp"/>
-
         <!-- Email -->
+
+        <!-- Password -->
         <EditText
             android:id="@+id/editEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter your email"
-            android:inputType="textEmailAddress"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_edittext"
 
-        <!-- Password -->
+            android:drawableStart="@drawable/ic_email_active"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Email Address"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:textSize="14sp" />
+
         <EditText
             android:id="@+id/editPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter your password"
-            android:inputType="textPassword"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_edittext"
+            android:drawableStart="@drawable/ic_password_active"
 
-        <!-- Remember + Forgot Password -->
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:textSize="14sp" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginBottom="16dp"
             android:gravity="center_vertical"
-            android:layout_marginBottom="16dp">
+            android:orientation="horizontal">
 
             <CheckBox
                 android:id="@+id/checkboxRemember"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Remember me"/>
+                android:fontFamily="@font/poppins_bold"
+                android:text="Remember me"
+                android:textSize="10sp" />
 
             <TextView
                 android:id="@+id/textForgotPassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Forgot Password?"
                 android:layout_weight="1"
+                android:fontFamily="@font/poppins_medium"
                 android:gravity="end"
-                android:textColor="@android:color/holo_blue_dark"/>
+                android:text="Forgot Password?"
+                android:textColor="#006FBB"
+                android:textSize="10sp" />
         </LinearLayout>
 
         <!-- Login Button -->
-
-        <!-- Register Link -->
         <Button
             android:id="@+id/buttonLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
             android:background="@drawable/btn_background"
-            android:text="Login"
-            android:textColor="#EDEDED"
-            app:cornerRadius="16dp" />
+            android:fontFamily="@font/poppins_semibold"
+            android:text="login"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
 
-
+        <!-- Register Link -->
         <TextView
             android:id="@+id/textRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_medium"
             android:text="Don't have an account? Register"
-            android:layout_marginTop="24dp"
-            android:textColor="@android:color/holo_blue_dark"/>
+            android:textColor="@android:color/holo_blue_dark" />
     </LinearLayout>
-
-</ScrollView>
+</RelativeLayout>
